@@ -657,7 +657,8 @@ async function logout() {
                       </div>
 
                       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
-                        {sub.members.map((member, index) => (
+  {Array.isArray(sub.members) &&
+    sub.members.map((member, index) => (
                           <div
                             key={index}
                             className="border rounded-2xl p-4 flex items-center justify-between"
